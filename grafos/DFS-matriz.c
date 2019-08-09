@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAXV 2000
+#define MAXV 2000 //quantidade máxima de vértices
 #define ADJACENTE 1
 #define NAO_ADJACENTE 0
 
@@ -10,7 +10,7 @@
 #define PRETO 2
 #define NULO -1
 
-int m[MAXV + 1][MAXV +1]; //matriz de adjacências
+char m[MAXV + 1][MAXV +1]; //matriz de adjacências
 int N; //quantidade de vértices
 int c[MAXV+1]; //cor
 int d[MAXV+1]; //tempo de descoberta
@@ -76,8 +76,8 @@ int main(){
 	
 	m[1][2] = ADJACENTE;
 	m[2][3] = ADJACENTE;
-	m[3][1] = ADJACENTE;
 	m[3][3] = ADJACENTE;
+	m[3][1] = ADJACENTE;
 	m[4][2] = ADJACENTE;
 
 	DFS();
