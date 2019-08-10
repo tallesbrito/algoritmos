@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAXV 2000 //tamanho do grid
+#define MAXV 2000 //tamanho máximo do grid
 #define QTD_MOVIMENTOS 4 //quantidade de movimentos
 
 #define BRANCO 0
@@ -14,6 +14,7 @@ int N; //tamanho do grid
 int c[MAXV][MAXV]; //cor
 int d[MAXV][MAXV]; //tempo de descoberta
 int t[MAXV][MAXV]; //tempo de término
+int a[MAXV][MAXV][2]; //coordenadas x:[0] e y:[1] do antecessor
 int tempo; //tempo corrente durante execução do algoritmo
 
 int movimentos[QTD_MOVIMENTOS][2] = {{-1,0},{0,1},{1,0},{0,-1}};
@@ -47,6 +48,8 @@ void DFS_VISIT(int i, int j){
 		int y = adjacenteY(mov,j);
 		if(valido(x,y)){ //se o movimento é válido
 			if(c[x][y]==BRANCO){
+				a[x][y][0] = i; //coordenada x do antecessor
+				a[x][y][1] = j; //coordenada y do antecessor
 				DFS_VISIT(x,y);
 			}
 		}
@@ -64,6 +67,8 @@ void DFS(){
 			c[i][j] = BRANCO;
 			d[i][j] = NULO;
 			t[i][j] = NULO;
+			a[i][j][0] = NULO;
+			a[i][j][1] = NULO;
 		}
 	}
 
@@ -88,6 +93,18 @@ void imprimir(int mat[][MAXV]){
 	printf("\n");
 }
 
+void imprimirCoordenadas(int mat[][MAXV][2]){
+	int i,j;
+	for(i = 0; i < N; i++){
+	  for(j = 0; j < N; j++){
+		printf("(%2d,%2d) ", mat[i][j][0],mat[i][j][1]);
+	  }
+	 printf("\n");
+	}
+	printf("\n");
+}
+
+
 int main(){
 
 	scanf("%d",&N);
@@ -100,6 +117,7 @@ int main(){
 	imprimir(c);
 	imprimir(d);
 	imprimir(t);
+	imprimirCoordenadas(a);
 
 	return 0;
 }
