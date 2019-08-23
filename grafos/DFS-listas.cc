@@ -23,8 +23,7 @@ void DFS_VISIT(int u){
 	d[u] = tempo;
 
 	int i,v;
-	for(i = 0; i < l[u].size(); i++){ //percorre cada elemento da lista l[u]
-		v = l[u][i]; //Obtendo o vértice v adjacente a u
+	for(int v: l[u]){ //percorre cada elemento da lista l[u]
 		if(c[v]==BRANCO){
 			a[v] = u;
 			DFS_VISIT(v);
@@ -64,7 +63,7 @@ void imprimir(int vet[]){
 
 void inicializar(){
 	int u;
-	for(u = 1; u <= N; u++){
+	for(u = 0; u <= MAXV; u++){
 		l[u] = vector<int>(); //cria uma lista vazia para cada vértice u
 	}
 }
