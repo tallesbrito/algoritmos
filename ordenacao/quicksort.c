@@ -31,12 +31,13 @@ void quicksort(int A[],int p,int r){
 
 int main(){
 
-	int vet[]={12,7,14,9,10,11};
+	int vet[10]={9,7,5,11,12,2,14,3,10,6};
 
-	quicksort(vet,0,5);
+	quicksort(vet,0,9);
 
 	int i;
-	for(i=0;i<6;i++){
+	for(i=0;i<10;i++){
 		printf("%d ", vet[i]);
 	}
+	printf("\n");
 }
