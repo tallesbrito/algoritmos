@@ -27,8 +27,7 @@ void DFS_VISIT(int u){
 		if(c[v]==BRANCO){
 			a[v] = u;
 			DFS_VISIT(v);
-		}
-		
+		}	
 	}
 
 	c[u] = PRETO;
