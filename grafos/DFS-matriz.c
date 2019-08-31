@@ -1,3 +1,17 @@
+/*
+Implementação da Busca em Profundidade (DFS) com Matriz de Adjacência.
+Autor: Talles Brito Viana
+
+Implementação de acordo com o algoritmo descrito em:
+CORMEN, T. H. et.al. Algoritmos: Teoria e Prática, 3º edição. Ed. Elsevier, 2012.
+
+A variável 'N' define a quantidade de vértices do grafo.
+
+A matriz 'm' armazena ADJACENTE em m[u][v] quando v é adjacente a u. Caso contrário, armazena NAO_ADJACENTE.
+
+A complexidade da busca com matriz de adjacência é dada por O(Nˆ2). Sendo assim, quando a quantidade de vértices é grande não é recomendado utilizar este método de armazenamento.
+*/
+
 #include <stdio.h>
 #include <string.h>
 

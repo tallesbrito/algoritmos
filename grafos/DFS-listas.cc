@@ -1,3 +1,20 @@
+/*
+Implementação da Busca em Profundidade (DFS) com Listas de Adjacência.
+Autor: Talles Brito Viana
+
+Implementação de acordo com o algoritmo descrito em:
+CORMEN, T. H. et.al. Algoritmos: Teoria e Prática, 3º edição. Ed. Elsevier, 2012.
+
+A variável 'N' define a quantidade de vértices do grafo.
+
+O vetor 'l' é um vetor de listas.
+
+Caso você deseje utilizar um grafo ponderado, é necessário alterar o tipo do vetor de listas 'l' para vector<pair<int,int> >. Neste caso, cada elemento da lista tem um par, o primeiro valor de um par (o identificador do vértice adjacente) é acessado através de .first, já o segundo (o peso da aresta que permite chegar no adjacente) através de .second. Para criar um novo par utilize a função make_pair(int,int). Não esqueça de adicionar #include <utility> no cabeçalho do programa. Além disso, você deve alterar a função DFS-VISIT para que a mesma trate os pares ao percorrer as listas.
+
+Supondo que M é a quantidade de arestas do grafo então a complexidade da busca é dada por O(N + M).
+*/
+
+
 #include <stdio.h>
 #include <vector>
 using namespace std;

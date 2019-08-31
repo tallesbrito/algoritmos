@@ -1,3 +1,17 @@
+/*
+Implementação da Busca em Profundidade (DFS) em um GRID de tamanho N X N.
+Autor: Talles Brito Viana
+
+Implementação de acordo com o algoritmo descrito em:
+CORMEN, T. H. et.al. Algoritmos: Teoria e Prática, 3º edição. Ed. Elsevier, 2012.
+
+Trata-se de um GRID de caracteres: caso deseje um grid de inteiros você deve alterar o tipo da matriz 'm'.
+
+Os tipos de movimentos são ajustados através da constante QTD_MOVIMENTOS e da matriz 'movimentos'.
+
+A complexidade da busca é O(Nˆ2 + QTD_MOVIMENTOS), como QTD_MOVIMENTOS é uma constante então podemos dizer que a complexidade da busca  é O(Nˆ2).
+*/
+
 #include <stdio.h>
 #include <string.h>
 
