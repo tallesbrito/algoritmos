@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void selection_sort(int A[], int n) { 
+void SELECTION_SORT(int A[], int n) { 
   int i, j, menor, aux;
   for (i = 0; i < n-1; i++) 
   {
@@ -21,7 +21,7 @@ int main(){
 
   int vet[] = {50,40,20,30,10};
 
-  selection_sort(vet,5);
+  SELECTION_SORT(vet,5);
 
   int i;
   for(i=0;i<5;i++)

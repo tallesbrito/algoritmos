@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void insertion_sort(int A[], int n) { 
+void INSERTION_SORT(int A[], int n) { 
   int i, j, chave;
   for (i = 1; i < n; i++){   
      chave = A[i];
@@ -20,7 +20,7 @@ int main(){
 
   int vet[] = {50,40,20,30,10};
 
-  insertion_sort(vet,5);
+  INSERTION_SORT(vet,5);
 
   int i;
   for(i=0;i<5;i++)
